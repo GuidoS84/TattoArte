@@ -287,7 +287,11 @@ h2 {
     }
 }
 
-
+.gallery-container .gallery-img:hover{
+    cursor:pointer;
+    transform: scale(1.5, 1.5);
+    transition:all, .5s;
+}
 
 
 /*
