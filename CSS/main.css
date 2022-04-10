@@ -1,0 +1,399 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #584df111;
+}
+
+body p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
+
+/*header*/
+
+#header{
+    display: flex;
+    background-color: #4D4D4D;
+    justify-content: space-between;
+    padding: 12px;
+    
+}
+
+
+
+
+.header-logo p{
+    border: #000000 solid 3px;
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
+.header-logo .del {
+    text-decoration: line-through;
+
+}
+
+
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    margin-top: 5px;
+}
+
+.nav-bar ul li a {
+    color: #ffffff;
+    margin: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;    
+}
+
+@media screen and (max-width: 480px){
+    .nav-bar{
+        display: none;
+    }
+}
+
+
+
+/*HOME*/
+
+.home-background{
+    display: flex;
+    height: 40vh;
+    justify-content: center;
+    background-size:cover;
+    background-image:url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    text-align: center;
+    background-attachment: fixed;
+    padding: 50px;
+}
+
+
+.home-txt h1{
+    font-size: 2.2em;
+}
+
+.home-background .del {
+    text-decoration: line-through;
+}
+
+.home-background .home-logo{
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.5em;
+    
+}
+.home-background .home-p{
+    color: #ffffff;
+    font-size: .9em;
+}
+
+@media (min-width: 481px) and (max-width: 767px) { /* desde 481 hasta 767 */
+    .home-background{
+        display: flex;
+        height: 470px;
+        justify-content: center;
+        background-size:cover;
+        background-image:url(../img/background.jpg);
+        background-repeat: no-repeat;
+        background-position:center;
+        text-align: center;
+        padding: 50px;
+    }
+    .home-txt{
+        margin-top: 40px;
+    }
+    .home-txt h1{
+        font-size: 3em;
+    }
+
+    .home-txt .home-logo{
+        font-size: 4.5em;
+      
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) { /* min-width = desde */
+    .home-background{
+        display: flex;
+        height: 473px;
+        justify-content: center;
+        background-size:cover;
+        background-image:url(../img/background.jpg);
+        background-repeat: no-repeat;
+        background-position:center;
+        text-align: center;
+        background-attachment: fixed;
+        padding: 50px;
+    }
+
+    .home-txt{
+        margin-top: 40px;
+    }
+    .home-txt h1{
+        font-size: 6em;
+    }
+
+    .home-txt .home-logo{
+        font-size: 7em;
+      
+    }
+}
+
+   
+
+    
+/*NOSOTROS*/
+#nosotros{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 460px;
+}
+
+.nosotros-txt{
+    width: 25%;
+    height: auto;
+    margin:25px;
+    text-align: center;
+    
+}
+/* le doy tamaño a la caja contenedora*/
+.nosotros-img{ 
+    width: 34%;
+}
+
+.nosotros-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*adapta la imagen al tamaño de la caja*/
+}
+
+.nosotros-txt h2{
+    font-size: 30px;
+    margin-bottom: 5px;
+    
+}
+
+.nosotros-txt h4 {
+    font-size: 28px;
+}
+
+.nosotros-txt p{
+    font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+    #nosotros{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    
+    
+    .nosotros-txt{
+        width: 80%;
+        height: 100vh;
+    }
+    
+    #nosotros .nosotros-img{
+        width: 80%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) { /* desde 481 hasta 767 */
+    
+    .nav-bar{
+        display: none;
+    }
+
+    .nosotros-txt{
+        width: 35%;
+        height: auto;
+        text-align: center;
+    }
+    .nosotros-txt h4{
+        font-size: 22px;
+    }
+
+    .nosotros-txt p{
+        font-size: 15px;
+    }
+
+    .nosotros-img {
+        width: 50%;
+    }
+}
+
+/* min-width = desde */
+@media screen and (min-width: 768px) { 
+    .notros-txt{
+        width: 35%;
+    }
+}
+
+/*GALERIA*/
+
+.gallery-container{
+    display: grid;
+    background-color: #000000;
+    border:#000000 solid 3px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap:2px;
+    
+}
+
+
+
+.gallery-container .gallery-img img{
+    width: 100%;
+    height: 200px; /*si pongo auto las imagenes no respetan el tamaño de la caja cont*/
+
+}
+
+@media screen and (min-width: 768px) {
+    .gallery-container{
+        display: grid;
+        border:#000000 solid 3px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .gallery-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/*
+.gallery-container img:nth-child(1){
+    grid-column: 1/3;
+    grid-row: 1/3;
+    height: auto;
+}
+*/
+
+
+
+
+/* galeria con flex
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+}
+*/
+
+
+
+/*EQUIPO*/
+
+#equipo{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 400px;
+    
+}
+
+h4{
+    font-size: 30px;
+}
+
+#equipo .equipo-img{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+#equipo p{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/*CONTACTO*/
+/* TODAVÍA NO ENCONTRE LA FORMA DE DEJARLO COMO YO QUIERO*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.form__input {
+    padding: 7px;
+    margin: 6px 0;
+    border-bottom: 3px solid #000000;    
+}
+
+.form-container textarea {
+    resize: none; 
+    
+}
+    
+
+
+
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color:#000000;;
+    position: sticky;
+    bottom: 0;
+}
+
+footer p{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+ 
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    color:#ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    
+}    
+
+footer ul li{
+    list-style: none;
+    padding: 0 15px;
+}
+
+
