@@ -16,3 +16,9 @@ Desde un branch y despues realice un merge para unificarlo con el main
 
 En contacto utilice un form de bootstrap y modificando algunas clases
 En equipos utilice un grid de bootstrap para hacerlo responsive
+
+## Estructure las páginas + agregue texto + unifique tipografía
+
+Corregí la estructura de los html
+Cambie los lorem por texto
+Unifique la tipografía
