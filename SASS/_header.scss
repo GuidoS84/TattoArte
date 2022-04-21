@@ -1,0 +1,26 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    .navbar-brand .del {
+        text-decoration: line-through;
+    }
+    .navbar-collapse{
+        justify-content: end;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 1rem;
+        margin: 0px 12px;
+        color: #ffffff;
+        font-family: 'Roboto Slab', serif;
+    }
+    .nav-item a:hover{
+        background-color:#F99D35;
+    }
+    .navbar-brand p{
+        border: #ffffff solid 3px;
+        font-size: 24px;
+        font-family: 'Roboto Slab', serif;
+        margin: 0px;
+    }
+}
