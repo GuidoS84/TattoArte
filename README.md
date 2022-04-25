@@ -23,7 +23,7 @@ Corregí la estructura de los html
 Cambie los lorem por texto
 Unifique la tipografía
 
-## Agregue carpetas SASS
+## Modifique nosotros.html con SASS
 
 Cree carpeta SASS y dos archivos CSS nuevos, styler.css y style.css.map 
 Con SASS trabajé sobre la página nosotros.html creando 3 archivos nuevos, styler.scss, _vars.scss y _header.scss  

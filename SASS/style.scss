@@ -1,3 +1,26 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #584df111;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    h2 {
+        text-align: center;
+        padding: 10px;
+        font-size: 2.2rem;
+        font-family: 'Roboto Slab', serif;
+    }
+    .img-fluid{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
 /*NOSOTROS*/
 
 @import "header";
@@ -6,12 +29,6 @@
 .nosotros {
     background-color: $colorPrincipal;
     height: 88vh;
-    & h2{
-        text-align: center;
-    padding: 10px;
-    font-size: 2.2rem;
-    font-family: 'Roboto Slab', serif;
-    }
     &__txt{
         width: auto;
         height: auto;
@@ -22,10 +39,4 @@
         margin: 12px;
         font-family: 'Roboto Slab', serif;
     }
-    &__img img{
-        width: 80%;
-        height: auto;
-    }
-        
-
 }

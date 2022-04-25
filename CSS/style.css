@@ -1,3 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #584df111;
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+body h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 2.2rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+body .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 /*NOSOTROS*/
 .header {
   position: -webkit-sticky;
@@ -39,13 +67,6 @@
   height: 88vh;
 }
 
-.nosotros h2 {
-  text-align: center;
-  padding: 10px;
-  font-size: 2.2rem;
-  font-family: 'Roboto Slab', serif;
-}
-
 .nosotros__txt {
   width: auto;
   height: auto;
@@ -58,10 +79,5 @@
 .nosotros__txt--content {
   margin: 12px;
   font-family: 'Roboto Slab', serif;
-}
-
-.nosotros__img img {
-  width: 80%;
-  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
