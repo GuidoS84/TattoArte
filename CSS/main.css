@@ -6,9 +6,9 @@
 body{
     background-color: #584df111;
     /*con esto puede colocarl footer en el final de las páginas*/
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
 }
 h2 {
     text-align: center;
@@ -228,7 +228,8 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color:#000000;;
+    background-color:#000000;
+    margin-top: auto;
    
 }
 footer p{
