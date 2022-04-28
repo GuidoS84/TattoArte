@@ -1,32 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background-color: #584df111;
-  display: -ms-grid;
-  display: grid;
-  min-height: 100vh;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
-}
-
-body h2 {
-  text-align: center;
-  padding: 10px;
-  font-size: 2.2rem;
-  font-family: 'Roboto Slab', serif;
-}
-
-body .img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-/*NOSOTROS*/
+@charset "UTF-8";
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -51,8 +23,10 @@ body .img-fluid {
   font-family: 'Roboto Slab', serif;
 }
 
-.header .nav-item a:hover {
+.header .navbar-dark .navbar-nav .nav-link:hover {
+  color: #212529;
   background-color: #F99D35;
+  border-radius: 5px;
 }
 
 .header .navbar-brand p {
@@ -62,12 +36,143 @@ body .img-fluid {
   margin: 0px;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #584df111;
+  /*se usa para tirar al footer al final de la pagina*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 2.2rem;
+  font-family: "Roboto Slab", serif;
+}
+
+body .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/*home*/
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 86vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  background-attachment: fixed;
+  padding: 50px;
+}
+
+.home-txt {
+  color: #000000;
+}
+
+.home-txt h1 {
+  font-size: 2.2rem;
+}
+
+.home-background .del {
+  text-decoration: line-through;
+}
+
+.home-background .home-logo {
+  font-family: "Roboto Slab", serif;
+  font-size: 3.5rem;
+}
+
+.home-background .home-p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Roboto Slab", serif;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* desde 481 hasta 767 */
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 470px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-size: cover;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+  }
+  .home-txt {
+    margin-top: 40px;
+  }
+  .home-txt h1 {
+    font-size: 3em;
+  }
+  .home-txt .home-logo {
+    font-size: 4.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* min-width = desde */
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 473px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-size: cover;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-attachment: fixed;
+    padding: 50px;
+  }
+  .home-txt {
+    margin-top: 40px;
+  }
+  .home-txt h1 {
+    font-size: 6em;
+  }
+  .home-txt .home-logo {
+    font-size: 7em;
+  }
+}
+
+/*NOSOTROS*/
 .nosotros {
   background-color: #584df111;
   height: 88vh;
 }
 
-.nosotros__txt {
+.nosotros__txt, .nosotros__txt--content {
   width: auto;
   height: auto;
   text-align: center;
@@ -78,6 +183,166 @@ body .img-fluid {
 
 .nosotros__txt--content {
   margin: 12px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
+}
+
+/*extend a modo de ejemplo*/
+.nosotros__txt--content {
+  background-color: #F99D35;
+}
+
+/*EQUIPO*/
+.col {
+  border: #000000 solid 4px;
+}
+
+.col__txt {
+  font-size: 3.5rem;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.col__img img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.col__img p {
+  background-color: #000000;
+  color: #F99D35;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  margin: 3px 0px 0px 0px;
+}
+
+/*Tatuajes*/
+.tatuajes__container {
+  display: -ms-grid;
+  display: grid;
+  background-color: #000000;
+  border: #000000 solid 3px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: repeat 6, auto;
+      grid-template-rows: repeat 6, auto;
+}
+
+.tatuajes__container img {
+  width: 100%;
+  height: 200px;
+  /*si pongo auto las imagenes no respetan el tamaño de la caja cont*/
+}
+
+.tatuajes__container img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all, .10s;
+  transition: all, .10s;
+}
+
+@media screen and (min-width: 768px) {
+  .tatuajes__container {
+    display: -ms-grid;
+    display: grid;
+    border: #000000 solid 3px;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tatuajes__container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+/*CONTACTO*/
+.contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.contacto__form {
+  width: 60%;
+  padding: 15px;
+  background-color: #F99D35;
+  margin: 20px 0px 200px 0px;
+}
+
+.container__button--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*FOOTER*/
+/* maps */
+.icon__red-wp {
+  color: green;
+}
+
+.icon__red-fb {
+  color: blue;
+}
+
+.icon__red-ig {
+  color: #e22b90;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  background-color: #000000;
+  margin-top: auto;
+}
+
+.footer__p {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer__ul li {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 0 15px;
 }
 /*# sourceMappingURL=style.css.map */

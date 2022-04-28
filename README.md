@@ -45,3 +45,6 @@ Responsive: Utilicé la clase img-fluid de bootstrap para que las imagenes de no
 Nav: modifiqué la pseudoclase para que el texto de las lista se cambie de color.
 Modifiqué el efecto de las fotos en tatuajes. les achiqué el zoom.
 SASS: quité el h2 de nosotros y lo coloqué en el body.
+
+## Pase todo a SASS + agregue un mapa  
+Escribí todo el código en SASS y agregue un mapa para el footer y un extend en nosotros.html
