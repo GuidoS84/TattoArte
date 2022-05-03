@@ -48,3 +48,7 @@ SASS: quité el h2 de nosotros y lo coloqué en el body.
 
 ## Pase todo a SASS + agregue un mapa  
 Escribí todo el código en SASS y agregue un mapa para el footer y un extend en nosotros.html
+
+## 
+Modifique index
+Agregue seccion topicos y un carrusel.

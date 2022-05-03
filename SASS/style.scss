@@ -11,22 +11,27 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    h2 {
+    h1 {
         text-align: center;
         padding: 10px;
         font-size: 2.2rem;
         font-family: $tipografiaPrincipal;
     }
+    p{
+        font-family: $tipografiaPrincipal;
+        // margin: 0px;
+    }
     .img-fluid{
         max-width: 100%;
         height: auto;
     }
+    
 }
 
 /*home*/
 .home{
     display: flex;
-    height: 86vh;
+    height: 57vh;
     justify-content: center;
     background-size:cover;
     background-image:url(../img/background.jpg);
@@ -50,10 +55,34 @@ body{
     }
     &-background .home-p{ 
         color: #ffffff;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-family: $tipografiaPrincipal;
     }
 }
+.topicos{
+    background-color:#000000;
+    &__container{
+        text-align: center;
+        color: #ffffff;
+    }
+    &__container--n{
+        font-size: 3.5rem;
+        margin: 0px;
+    }
+    &__container--txt{
+        font-size: 1.2rem;
+        margin: 0px 0 10px 0;
+    }
+}
+
+
+.carousel {
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    
+}
+
 @media (min-width: 481px) and (max-width: 767px) { /* desde 481 hasta 767 */
     .home{
         display: flex;
@@ -76,12 +105,14 @@ body{
             font-size: 4.5em;
           
         }
+        
+        
     }
 }
 @media screen and (min-width: 768px) { /* min-width = desde */
     .home{
         display: flex;
-        height: 473px;
+        height: 500px;
         justify-content: center;
         background-size:cover;
         background-image:url(../img/background.jpg);
@@ -99,55 +130,68 @@ body{
         &-txt .home-logo{
             font-size: 7em;
         }
+        
+    }
+    .carousel {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &-inner{
+        border: #000000 solid 5px;
+        }
     }
     
 }
 
+
 /*NOSOTROS*/
-
-.nosotros {
-    background-color:$colorPrincipal;
-    height: 88vh;
-    &__txt{
-        width: auto;
-        height: auto;
-        text-align: center;
-        align-items: center;
-    }
-    &__txt--content{
-         margin: 12px;
-         font-family:$tipografiaPrincipal;
-    }
-
-}
-/*extend a modo de ejemplo*/
-.nosotros__txt--content{
-    @extend .nosotros__txt;
-    background-color: #F99D35;
-}
-/*EQUIPO*/
-.col{
-    border: #000000 solid 4px;
-    &__txt {
-        font-size: 3.5rem;
-        text-align: center;
-        align-self: center;
-        
-    }
-    &__img img{
+.nosotros__container1 {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    & img{
         width: 100%;
-        height: 350px;
-        object-fit: cover;
     }
-    &__img p{
-        background-color: #000000;
-        color: #F99D35;
-        font-family:$tipografiaPrincipal;
+    & p {
+        font-size: 1.2rem;
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        padding: 12px;
         text-align: center;
-        margin: 3px 0px 0px 0px;
+        border: #000000 solid 3px;
+        animation-duration: 8s;
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+    }
+    @keyframes aparecer {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
     }
 }
-
+.nosotros__container2{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    & img{
+        // border: #000000 solid 3px;
+        width: 100%;
+    }
+    & p{
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        padding: 13px;
+        text-align: center;
+        border: #000000 solid 3px;
+    }
+}
 
 /*Tatuajes*/
 .tatuajes__container{
@@ -156,9 +200,10 @@ body{
     border:#000000 solid 3px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat (6, auto);
+    gap: 3px;
     &  img{
         width: 100%;
-        height: 200px; /*si pongo auto las imagenes no respetan el tamaño de la caja cont*/
+        height: auto; 
     }
     & img:hover{
         cursor:pointer;
@@ -182,6 +227,33 @@ body{
     }
 }
 
+/*EQUIPO*/
+.col{
+    border: #000000 solid 4px;
+    &__txt h2{
+        font-family: $tipografiaPrincipal;
+        font-size: 2rem;
+        text-align: center;
+        align-self: center;
+    }
+    &__txt p{
+        text-align: center;
+        padding: 15px;
+
+    }
+    &__img img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    &__img p{
+        background-color: #000000;
+        color: #F99D35;
+        font-family:$tipografiaPrincipal;
+        text-align: center;
+        margin: 3px 0px 0px 0px;
+    }
+}
 /*CONTACTO*/
 .contacto {
     display: flex;
@@ -192,7 +264,7 @@ body{
     &__form {
         width: 60%;
         padding: 15px;
-        background-color: #F99D35;
+        background-color: #ffcc00;
         margin: 20px 0px 200px 0px;
     }
  
@@ -201,6 +273,14 @@ body{
     display: flex;
     justify-content: center;
 }
+.mapa__box{
+     opacity: 0.5;
+     &:hover{
+         opacity: 1;
+     }
+}
+   
+
 
 /*FOOTER*/
 /* maps */
