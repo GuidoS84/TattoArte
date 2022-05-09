@@ -37,6 +37,7 @@
   font-size: 24px;
   font-family: 'Roboto Slab', serif;
   margin: 0px;
+  text-shadow: none;
 }
 
 * {
@@ -68,11 +69,7 @@ body h1 {
 
 body p {
   font-family: "Roboto Slab", serif;
-}
-
-body .img-fluid {
-  max-width: 100%;
-  height: auto;
+  text-shadow: 4px 4px 4px #808080;
 }
 
 /*home*/
@@ -97,11 +94,11 @@ body .img-fluid {
   color: #000000;
 }
 
-.home-txt h1 {
+.home h1 {
   font-size: 2.2rem;
 }
 
-.home-background .del {
+.home .del {
   text-decoration: line-through;
 }
 
@@ -128,11 +125,13 @@ body .img-fluid {
 .topicos__container--n {
   font-size: 3.5rem;
   margin: 0px;
+  text-shadow: none;
 }
 
 .topicos__container--txt {
   font-size: 1.2rem;
   margin: 0px 0 10px 0;
+  text-shadow: none;
 }
 
 .carousel {
@@ -158,10 +157,10 @@ body .img-fluid {
     text-align: center;
     padding: 50px;
   }
-  .home-txt {
+  .home__txt {
     margin-top: 40px;
   }
-  .home-txt h1 {
+  .home h1 {
     font-size: 3em;
   }
   .home-txt .home-logo {
@@ -190,7 +189,7 @@ body .img-fluid {
   .home-txt {
     margin-top: 40px;
   }
-  .home-txt h1 {
+  .home h1 {
     font-size: 6em;
   }
   .home-txt .home-logo {
@@ -280,6 +279,22 @@ body .img-fluid {
   border: #000000 solid 3px;
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
+  .nosotros__container1 {
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 /*Tatuajes*/
 .tatuajes__container {
   display: -ms-grid;
@@ -319,14 +334,13 @@ body .img-fluid {
 @media screen and (min-width: 1200px) {
   .tatuajes__container {
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
   }
 }
 
 /*EQUIPO*/
 .col {
-  border: #000000 solid 4px;
+  margin-bottom: 5px;
 }
 
 .col__txt h2 {
@@ -341,21 +355,17 @@ body .img-fluid {
 .col__txt p {
   text-align: center;
   padding: 15px;
-}
-
-.col__img img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  text-shadow: 1px 1px 1px 1px #000000;
 }
 
 .col__img p {
   background-color: #000000;
-  color: #F99D35;
+  color: #ffcc00;
   font-family: "Roboto Slab", serif;
   text-align: center;
   margin: 3px 0px 0px 0px;
+  padding: 3px;
+  text-shadow: none;
 }
 
 /*CONTACTO*/
@@ -396,56 +406,49 @@ body .img-fluid {
   opacity: 0.5;
 }
 
-.mapa__box:hover {
+.mapa__box :hover {
   opacity: 1;
 }
 
 /*FOOTER*/
 /* maps */
 .icon__red-wp {
-  color: green;
+  color: #49c858;
 }
 
 .icon__red-fb {
-  color: blue;
+  color: #1771e6;
 }
 
 .icon__red-ig {
-  color: #e22b90;
+  color: #da3284;
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px;
   background-color: #000000;
-  margin-top: auto;
-}
-
-.footer__p {
-  font-size: 16px;
-  color: #ffffff;
-  font-weight: 600;
 }
 
 .footer__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 16px;
-  font-weight: 600;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 10px;
+  list-style: none;
 }
 
-.footer__ul li {
-  font-size: 1.5rem;
+.footer li {
+  font-size: 1.7rem;
   list-style: none;
-  padding: 0 15px;
+  text-decoration: none;
+}
+
+.footer a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

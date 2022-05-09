@@ -16,16 +16,13 @@ body{
         padding: 10px;
         font-size: 2.2rem;
         font-family: $tipografiaPrincipal;
+        
     }
     p{
         font-family: $tipografiaPrincipal;
-        // margin: 0px;
+        text-shadow: 4px 4px 4px #808080
+        
     }
-    .img-fluid{
-        max-width: 100%;
-        height: auto;
-    }
-    
 }
 
 /*home*/
@@ -43,10 +40,10 @@ body{
     &-txt{
         color: #000000;
     }
-    &-txt h1{
+    h1{
         font-size: 2.2rem;
     }
-    &-background .del {
+    .del {
         text-decoration: line-through;
     }
     &-background &-logo{ 
@@ -64,23 +61,22 @@ body{
     &__container{
         text-align: center;
         color: #ffffff;
-    }
-    &__container--n{
-        font-size: 3.5rem;
-        margin: 0px;
+        &--n{
+            font-size: 3.5rem;
+            margin: 0px;
+            text-shadow: none;
+        }
     }
     &__container--txt{
         font-size: 1.2rem;
         margin: 0px 0 10px 0;
+        text-shadow: none;
     }
 }
-
-
 .carousel {
     width: 100%;
     height: 500px;
     margin: auto;
-    
 }
 
 @media (min-width: 481px) and (max-width: 767px) { /* desde 481 hasta 767 */
@@ -94,19 +90,16 @@ body{
         background-position:center;
         text-align: center;
         padding: 50px;
-        &-txt{
+        &__txt{
             margin-top: 40px;
         }
-        &-txt h1{
+        h1{
             font-size: 3em;
         }
-    
         &-txt .home-logo{
             font-size: 4.5em;
           
         }
-        
-        
     }
 }
 @media screen and (min-width: 768px) { /* min-width = desde */
@@ -124,7 +117,7 @@ body{
         &-txt{
             margin-top: 40px;
         }
-        &-txt h1{
+        h1{
             font-size: 6em;
         }
         &-txt .home-logo{
@@ -144,17 +137,15 @@ body{
     }
     
 }
-
-
 /*NOSOTROS*/
 .nosotros__container1 {
     margin: 10px;
     display: flex;
     align-items: center;
-    & img{
+    img{
         width: 100%;
     }
-    & p {
+    p {
         font-size: 1.2rem;
         width: 100%;
         height: auto;
@@ -179,11 +170,10 @@ body{
     margin: 10px;
     display: flex;
     align-items: center;
-    & img{
-        // border: #000000 solid 3px;
+    img{
         width: 100%;
     }
-    & p{
+    p{
         width: 100%;
         height: auto;
         margin: 10px 0;
@@ -192,7 +182,14 @@ body{
         border: #000000 solid 3px;
     }
 }
-
+@media (min-width: 576px) and (max-width: 768px) {
+    .nosotros__container1 {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+}
 /*Tatuajes*/
 .tatuajes__container{
     display: grid;
@@ -201,11 +198,11 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat (6, auto);
     gap: 3px;
-    &  img{
+    img{
         width: 100%;
         height: auto; 
     }
-    & img:hover{
+    img:hover{
         cursor:pointer;
         transform: scale(1.05);
         transition:all, .10s;
@@ -222,14 +219,13 @@ body{
 @media screen and (min-width: 1200px) {
     .tatuajes__container {
         width: 100%;
-        max-width: 1000px;
         margin: 0 auto;
     }
 }
 
 /*EQUIPO*/
 .col{
-    border: #000000 solid 4px;
+    margin-bottom: 5px;
     &__txt h2{
         font-family: $tipografiaPrincipal;
         font-size: 2rem;
@@ -239,19 +235,17 @@ body{
     &__txt p{
         text-align: center;
         padding: 15px;
+        text-shadow: 1px 1px 1px 1px #000000;
 
-    }
-    &__img img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
     }
     &__img p{
         background-color: #000000;
-        color: #F99D35;
+        color: $colorSecundario;
         font-family:$tipografiaPrincipal;
         text-align: center;
         margin: 3px 0px 0px 0px;
+        padding: 3px;
+        text-shadow: none;
     }
 }
 /*CONTACTO*/
@@ -264,30 +258,27 @@ body{
     &__form {
         width: 60%;
         padding: 15px;
-        background-color: #ffcc00;
+        background-color: $colorSecundario;
         margin: 20px 0px 200px 0px;
     }
- 
 }
 .container__button--form {
     display: flex;
     justify-content: center;
 }
 .mapa__box{
-     opacity: 0.5;
-     &:hover{
+    opacity: 0.5;
+    :hover{
          opacity: 1;
      }
 }
    
-
-
 /*FOOTER*/
 /* maps */
 $red-social: (
-    wp: green,
-    fb: blue,
-    ig: rgb(226, 43, 144),
+    wp:#49c858,
+    fb: #1771e6,
+    ig: #da3284,
     
 );
 @each $nombre, $valor in $red-social {
@@ -295,28 +286,20 @@ $red-social: (
         color: $valor;
     }
 }
-
 .footer {
-    display: flex;
     justify-content: space-between;
-    padding: 10px;
     background-color:#000000;
-    margin-top: auto;
-    &__p{
-        font-size: 16px;
-        color: #ffffff;
-        font-weight: 600;
-    }
     &__ul{
         display: flex;
-        justify-content: space-between;
-        
-        font-size: 16px;
-        font-weight: 600;    
+        justify-content: space-evenly;
+        margin: 10px;list-style: none;
     }    
-    &__ul li{
-        font-size: 1.5rem;
+    li {
+        font-size: 1.7rem;
         list-style: none;
-        padding: 0 15px;
+        text-decoration: none;
+    }
+    a{
+        text-decoration: none;
     }
 }

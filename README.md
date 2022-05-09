@@ -52,3 +52,7 @@ Escribí todo el código en SASS y agregue un mapa para el footer y un extend en
 ## 
 Modifique index
 Agregue seccion topicos y un carrusel.
+
+## entrega final
+Modifique y agregue footer a todas las páginas
+Agregue sombras a textos
